@@ -1,9 +1,7 @@
 let Cantidad_Agua = 0
 let Dias_menos_2mm = 0
 let Agua_Diaria = 0
-input.onButtonPressed(Button.A, function () {
-	
-})
+let Promedio = 0
 basic.forever(function () {
     if (input.buttonIsPressed(Button.A)) {
         Cantidad_Agua = 0
@@ -15,9 +13,14 @@ basic.forever(function () {
                 Dias_menos_2mm += 1
             }
         }
+        basic.showString("C:")
         basic.showNumber(Cantidad_Agua)
+        basic.showString("P:")
+        Promedio = Cantidad_Agua / 1825
+        basic.showString("" + (Promedio))
     }
     if (input.buttonIsPressed(Button.B)) {
+        basic.showString("Menos 2mm:")
         basic.showNumber(Dias_menos_2mm)
     }
 })
